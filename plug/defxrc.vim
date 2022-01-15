@@ -32,6 +32,19 @@ function! s:defx_toggle_tree() abort
     return defx#do_action('multi', ['drop'])
 endfunction
 
+
+" 在打开多个tab的情况下，当前tab里只有一个buffer和nerd树，当关闭buffer时，自动关闭当前标签页的nerd树
+autocmd BufEnter * if tabpagenr('$') > 1 && winnr('$') == 1 && exists('b:defx') |
+\ tabclose | endif
+
+    " 在新tab页打开文件
+func! MyT(context) abort
+  if isdirectory(get(a:context.targets, 0)) == 0
+  	call defx#call_action('drop', 'tabe')
+	endif
+endfunc
+
+
 call defx#custom#column('icon', {
       \ 'directory_icon': ' ',
       \ 'opened_icon': ' ',
@@ -39,16 +52,16 @@ call defx#custom#column('icon', {
 			\ 'vim': ' '
 			\ })
 
-call defx#custom#column('git', 'indicators', {
-			\ 'Modified'  : 'M',
-  		\ 'Staged'    : '✚',
-  		\ 'Untracked' : '✭',
-  		\ 'Renamed'   : '➜',
-  		\ 'Unmerged'  : '═',
-  		\ 'Ignored'   : '☒',
-  		\ 'Deleted'   : '✖',
-  		\ 'Unknown'   : '?'
-  		\ })
+" call defx#custom#column('git', 'indicators', {
+" 			\ 'Modified'  : 'M',
+"   		\ 'Staged'    : '✚',
+"   		\ 'Untracked' : '✭',
+"   		\ 'Renamed'   : '➜',
+"   		\ 'Unmerged'  : '═',
+"   		\ 'Ignored'   : '☒',
+"   		\ 'Deleted'   : '✖',
+"   		\ 'Unknown'   : '?'
+"   		\ })
 
 " 增加图标的宽度，来解决图标 与文件名重叠的问题
 "let g:defx_icons_column_length = 2

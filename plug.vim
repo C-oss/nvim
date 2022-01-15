@@ -24,6 +24,8 @@ Plug 'kevinhwang91/rnvimr'
 Plug 'shougo/defx.nvim'
 "Plug 'C-oss/defx-icons'
 Plug 't9md/vim-choosewin'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'scrooloose/nerdtree'
