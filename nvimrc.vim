@@ -10,6 +10,7 @@ set wrap
 set ignorecase
 set smartcase
 set cursorline
+set mouse=a
 
 syntax on
 
