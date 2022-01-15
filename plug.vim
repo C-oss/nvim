@@ -14,15 +14,12 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'marko-cerovac/material.nvim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/edge'
-"Plug 'sainnhe/everforest'
-
 
 " Ranger
 Plug 'kevinhwang91/rnvimr'
 
 " defx 文件管理
 Plug 'shougo/defx.nvim'
-"Plug 'C-oss/defx-icons'
 Plug 't9md/vim-choosewin'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'

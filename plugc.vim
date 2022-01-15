@@ -8,18 +8,12 @@ source ~/.config/nvim/plug/rnvimr.vim
 
 " defx.nvim defx-icons vim-chooswin
 source ~/.config/nvim/plug/defxrc.vim
-source ~/.config/nvim/plug/defx-icons.vim
 
-source ~/.config/nvim/plug/nvim-treesitter.vim
 source ~/.config/nvim/plug/rainbow.vim
 source ~/.config/nvim/plug/kommentary.vim
 source ~/.config/nvim/plug/vim-choosewin.vim
 source ~/.config/nvim/plug/nvim-tree.vim
 
-
-" 行号颜色
-":highlight LineNr ctermfg=White
-":highlight LineNr ctermbg=red
 
 "=== 主题引用 ===
 " Gruvbox-material
